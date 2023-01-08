@@ -12,8 +12,7 @@ Prerequisites
 * Maven 3 
 * MySQL 5.6
 
-![mailtrap](images/../../Images/vprofile-project.png)
-![mailtrap host](../Images/db-validation.png)
+![mailtrap](Images/vprofile-project.png)
   
 Technologies
 ***
@@ -32,7 +31,7 @@ Flow Of Execution
 4. Bring up Vm's
 5. Validate
 
-![mailtrap](images/project-view.png)
+![mailtrap](Images/project-view.png)
 
 ## Step1: VM Setup
 * Clone the repository of the project to your machine
