@@ -12,8 +12,8 @@ Prerequisites
 * Maven 3 
 * MySQL 5.6
 
-![mailtrap](images/vprofile-project.png)
-
+![mailtrap](images/../../Images/vprofile-project.png)
+![mailtrap host](../Images/db-validation.png)
   
 Technologies
 ***
