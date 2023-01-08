@@ -1,4 +1,4 @@
-# Vprofile Project
+# Vprofile Project 01
 ## Manual Setup Of Multi-Tier Web Application, Locally.
 
 [Project Source](https://github.com/Afeez-AA/vprofile-project.git)
@@ -12,7 +12,7 @@ Prerequisites
 * Maven 3 
 * MySQL 5.6
 
-![mailtrap](Images/vprofile-project.png)
+![mailtrap](images/vprofile-project.png)
   
 Technologies
 ***
@@ -31,7 +31,7 @@ Flow Of Execution
 4. Bring up Vm's
 5. Validate
 
-![mailtrap](Images/project-view.png)
+![mailtrap](images/project-view.png)
 
 ## Step1: VM Setup
 * Clone the repository of the project to your machine
