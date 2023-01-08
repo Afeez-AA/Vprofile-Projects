@@ -12,7 +12,7 @@ Prerequisites
 * Maven 3 
 * MySQL 5.6
 
-![mailtrap](images/vprofile-project.png)
+![mailtrap](Images/vprofile-project.png)
   
 Technologies
 ***
@@ -31,7 +31,7 @@ Flow Of Execution
 4. Bring up Vm's
 5. Validate
 
-![mailtrap](images/project-view.png)
+![mailtrap](Images/project-view.png)
 
 ## Step1: VM Setup
 * Clone the repository of the project to your machine
@@ -61,13 +61,13 @@ Flow Of Execution
   ```
 
 * Verify the VM is now up
-  ![mailtrap](images/vm-validation.png)
+  ![mailtrap](Images/vm-validation.png)
 
 * We need to check the `/etc/hosts` file as this should have been updated since the plugin's were installed.
   ```sh
   cat /etc/hosts
   ```
-  ![mailtrap](images/hosts-file.png)
+  ![mailtrap](Images/hosts-file.png)
 
 * From web01, ping the other VM's to verify the connectivity
   ```sh
@@ -76,7 +76,7 @@ Flow Of Execution
       ping mc01
       ping db01
   ```
-  ![Alt Text](images/ping-validation.png)
+  ![Alt Text](Images/ping-validation.png)
 ## Step2: Service Provisioning 
 * Note: We have 6 different services for our application
   1. Nginx: Web service
@@ -86,7 +86,7 @@ Flow Of Execution
   5. ElasticSearch: Indexing/serach service
   6. MySQL (MariaDB): SQL Database
   
-![Alt Text](images/Detailed-Architecture-of-VprofileProject.png)
+![Alt Text](Images/Detailed-Architecture-of-VprofileProject.png)
 
 * We'll be setting up our services in the order below;
   1. MySQL (MariaDB) (Database SVC)
@@ -130,28 +130,28 @@ Flow Of Execution
     systemctl enable mariadb
     systemctl status mariadb
   ```
-  ![ALT text](images/mariadb-running.png)
+  ![ALT text](Images/mariadb-running.png)
 
 * Run MySQL secure installation script
   ```sh
     mysql_secure_installation
   ```
 * set the db password and other parameters as shown below
-  ![ALT text](images/mariadb-passwd-set.png)
+  ![ALT text](Images/mariadb-passwd-set.png)
   
 * validate the database connection
   ```sh
     mysql -u root -p
     exit
   ```
-  ![ALT text](images/mariadb-login-validation.png)
+  ![ALT text](Images/mariadb-login-validation.png)
 
 * Next, clone the source code the change the directory to get the `sql queries`
   ```sh
     git clone https://github.com/Afeez-AA/vprofile-project.git
     cd vprofile-project/src/main/resources
   ```
-  ![ALT text](images/mariadb-gitclone.png)
+  ![ALT text](Images/mariadb-gitclone.png)
 
 * Run the following commands to create a database `accounts`, user `admin` 
   ```sh
@@ -195,7 +195,7 @@ Flow Of Execution
     systemctl enable memcached
     systemctl status memcache
   ```
-    ![ALT text](images/memcache-running.png)
+    ![ALT text](Images/memcache-running.png)
 
 * Run the command below to enable `memcached` service listen on TCP port `11211` and UDP port `11111`
    ```sh
@@ -205,7 +205,7 @@ Flow Of Execution
    ```sh
     ss -tunlp | grep 11211
   ```
-  ![ALT text](images/memcache-port-validation.png)
+  ![ALT text](Images/memcache-port-validation.png)
 
 * Good work!!!!!! You can exit from the server with the `exit` command.
 
@@ -238,7 +238,7 @@ Flow Of Execution
     systemctl enable rabbitmq-server
     systemctl status rabbitmq-server
   ```
-  ![ALT text](images/rabbitmq-running.png)
+  ![ALT text](Images/rabbitmq-running.png)
 
 * Create a `test` user with password `test`, then create a user_tag for test user as administrator. When completed, restart the rabbitmq service
   ```sh
@@ -249,7 +249,7 @@ Flow Of Execution
     systemctl restart rabbitmq-server
   ```
 * Check the service status to verify proper configuration.
-  ![ALT text](images/rabbitmq-service-restart.png)
+  ![ALT text](Images/rabbitmq-service-restart.png)
 
 * Good!!! You can exit with the `exit` command
 
@@ -323,7 +323,7 @@ Flow Of Execution
     systemctl enable tomcat
     systemctl status tomcat
   ```
-  ![ALT text](images/tomcat%20running.png)
+  ![ALT text](Images/tomcat%20running.png)
 
 * Code Build and Deploy to Tomcat server
 * We will clone our source code in the `/tmp` directory, the `cd` to the `vprofile-project` directory
@@ -415,20 +415,20 @@ Now time to provision the nginx server
   ```sh
     ifconfig
   ```
-  ![ALT text](images/ifconfig.png)
+  ![ALT text](Images/ifconfig.png)
 
 * Nginx is running on browser using the ip address of the web01 server
-  ![ALT text](images/nginx-validation.png)
+  ![ALT text](Images/nginx-validation.png)
 
 * Validate Db connection using credentials admin_vp for both username and password.
 * Validate app is running on the Tomcat server
-   ![ALT text](images/db-validation.png)
+   ![ALT text](Images/db-validation.png)
 * Validate RabbitMQ connection by clicking `RabbitMQ`
-   ![ALT text](images/rabbitmq-validation.png)
+   ![ALT text](Images/rabbitmq-validation.png)
 * Validate Memcache connection by clicking `AllUsers`
-   ![ALT text](images/memcache-validation.png)
+   ![ALT text](Images/memcache-validation.png)
 *  Validate data is coming from Database when user first time requests it.  
-  ![ALT text](images/user-database-validation.png)
+  ![ALT text](Images/user-database-validation.png)
 ### STEP4: CleanUp
 In our manual provisioning directory containing our vagrant file, run the command below to destroy all virtual machines.
   ```sh
