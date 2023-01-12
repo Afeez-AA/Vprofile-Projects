@@ -1,5 +1,5 @@
 # Vprofile Project 01
-## Manual Setup Of Multi-Tier Web Application, Locally.
+## Manual Setup Of a Multi-Tier Web Application, Locally.
 
 [Project Source](https://github.com/Afeez-AA/vprofile-project.git)
 
