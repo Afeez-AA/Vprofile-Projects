@@ -432,5 +432,6 @@ Now time to provision the nginx server
 ### STEP4: CleanUp
 In our manual provisioning directory containing our vagrant file, run the command below to destroy all virtual machines.
   ```sh
+    vagrant halt
     vagrant destroy
   ```
